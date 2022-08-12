@@ -1,0 +1,22 @@
+diff --git a/node_modules/react-native-option-menu/index.js b/node_modules/react-native-option-menu/index.js
+index 186c5d1..847e7a2 100644
+--- a/node_modules/react-native-option-menu/index.js
++++ b/node_modules/react-native-option-menu/index.js
+@@ -24,7 +24,7 @@ const OptionMenu = (props) =>{
+                 setOpen(open);
+               } else {
+                 if (props.actions[i] !== null) {
+-                  props.actions[i]();
++                  props.actions(i);
+                 }
+               }
+             }
+@@ -110,7 +110,7 @@ const OptionMenu = (props) =>{
+     </View>) : null;
+ 
+     let component = props.button ? (
+-        <Image source={props.button} style={props.buttonStyle} />
++       props.button
+     ) : (
+         props.customButton
+     );

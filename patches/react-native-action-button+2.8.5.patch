@@ -1,0 +1,20 @@
+diff --git a/node_modules/react-native-action-button/ActionButton.js b/node_modules/react-native-action-button/ActionButton.js
+index b8306c2..054fe1e 100644
+--- a/node_modules/react-native-action-button/ActionButton.js
++++ b/node_modules/react-native-action-button/ActionButton.js
+@@ -232,7 +232,6 @@ export default class ActionButton extends Component {
+     const { icon, renderIcon, btnOutRangeTxt, buttonTextStyle, buttonText } = this.props;
+     if (renderIcon) return renderIcon(this.state.active);
+     if (icon) {
+-      console.warn('react-native-action-button: The `icon` prop is deprecated! Use `renderIcon` instead.');
+       return icon;
+     }
+ 
+@@ -363,7 +362,6 @@ ActionButton.propTypes = {
+   bgColor: PropTypes.string,
+   bgOpacity: PropTypes.number,
+   buttonColor: PropTypes.string,
+-  buttonTextStyle: Text.propTypes.style,
+   buttonText: PropTypes.string,
+ 
+   offsetX: PropTypes.number,
